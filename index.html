@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="ro">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Costin Milea Photo Art</title>
+    <meta name='subject' content="Costin Milea Photo Art">
+    <meta name="description" content="Costin Milea - Fotograf profesionist pentru evenimente speciale.">
+    <meta name='keywords' content="fotograf, fotograf profesionist, fotografie, photography, fotograf nunti si botezuri, fotograf evenitmente">
+    <meta name='Classification' content='Photography'>
+    <meta name='author' content='Mihai Marinescu, mmswi.com'>
+    <meta property="og:title" content="Costin Milea Photo Art" />
+    <meta property="og:image" content="http://s29.postimg.org/bxvkwlf6v/logo_small.png" />
+    <meta property="og:description" content="Costin Milea - Fotograf profesionist pentru evenimente speciale." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta property="place:location:latitude" content="44.436939" />
+    <meta property="place:location:longitude" content="26.025197" />
+    <meta property="business:contact_data:street_address" content="Strada Roșia Montană" />
+    <meta property="business:contact_data:locality" content="București" />
+    <meta property="business:contact_data:country_name" content="Romania" />
+    <meta property="business:contact_data:email" content="costin@costin-milea.ro" />
+    <meta property="business:contact_data:phone_number" content="+4 0765 457 327" />
+    <meta property="business:contact_data:website" content="http://www.costin-milea.ro" />
+
+    <meta name="twitter:title" content="Costin Milea Photo Art">
+    <meta name="twitter:description" content="Costin Milea - Fotograf profesionist pentru evenimente speciale." />
+    <meta name="twitter:image:src" content="http://s29.postimg.org/bxvkwlf6v/logo_small.png" />
+    <meta name="twitter:domain" content="www.costin-milea.ro" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+    <script src="assets/javascripts/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body ng-app="photoApp">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <!-- The Navbar -->
+    <div class="container">
+
+
+        <div menu-toggle><a id="menu-toggle"><span class="sr-only">menu button</span><img src="assets/images/menu-toggle.png" alt="menu toggle"></a>
+        </div>
+        <!-- The Navbar -->
+        <nav class="navigation-styles">
+            <div>
+                <a id="close-toggle"><img src="assets/images/close-toggle.png" alt="close toggle menu">
+                </a>
+            </div>
+            <ul class="main-nav">
+                <li>
+                    <a ui-sref="despre">despre</a>
+                </li>
+                <li>
+                    <a ui-sref="proiecte" class="menu-btn active-link">proiecte</a>
+                </li>
+                <li>
+                    <a ui-sref="contact" class="menu-btn">contact</a>
+                </li>
+            </ul>
+            <ul class="second-nav">
+                <li><a href="https://www.facebook.com/Costin-Milea-127243850653136" target="_blank">Facebook</a>
+                </li>
+                <li><a href="https://instagram.com/costin_milea/" target="_blank">Instagram</a>
+                </li>
+                <li><a href="https://twitter.com/cmphotoartz" target="_blank">Twitter</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /nav -->
+
+        <!-- main section -->
+        <div class="row">
+            <div ui-view class=""></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/javascripts/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="assets/javascripts/vendor/respond.min.js"></script>
+    <script src="assets/javascripts/plugins.js"></script>
+    <script src="assets/bower_components/angular/angular.min.js"></script>
+
+    <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="assets/bower_components/angular-utils-pagination/dirPagination.js"></script>
+
+    <script src="app.js"></script>
+    <script src="app/components/projects/projectsController.js"></script>
+    <script src="app/components/shared/projectsFactory.js"></script>
+    <script src="app/components/shared/selectedProjectService.js"></script>
+    <script src="app/components/shared/project/projectController.js"></script>
+    <script src="app/components/shared/swipeBoxDirective.js"></script>
+    <script src="app/components/shared/fullPageDirective.js"></script>
+    <script src="app/components/shared/menuToggleDirective.js"></script>
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-68552204-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

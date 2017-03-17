@@ -1,0 +1,37 @@
+<header class="row projects-header">
+    <div class="logo-container">
+        <a href="index.html" class="logo-link"><img src="assets/images/logo-small.png" alt="logo image">
+        </a>
+    </div>
+    <div class="col-xs-12">
+        <ul list-toggle>
+            <li><span class="visible-xs projects-filter">Categorii <i class="fa fa-caret-down"></i></span>
+                <ul class="projects-list projects" id="projects-nav-btns">
+                    <li ng-click="filterProject('ceremonii')"><a>Ceremonii</a>
+                    </li>
+                    <li ng-click="filterProject('moda')"><a>Fashion</a>
+                    </li>
+                    <li ng-click="filterProject('celebritati')"><a>Produs</a>
+                    </li>
+                    <li ng-click="filterProject('business')"><a>Business</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="col-xs-12 col-sm-10 col-sm-offset-2 col-lg-offset-1 clearfix margin-bottom-20">
+    <article class="project-item" dir-paginate="project in projects | filter:projectFilter | itemsPerPage: 99">
+        <a ui-sref="proiect({id: project.id})" ng-click="selectProject(project.id)"><h2 class="project-title-thumb">{{project.name}}</h2><img ng-src="{{project.firstImage}}" alt="" class=" ">
+        </a>
+    </article>
+    <div class="clearfix"></div>
+    <dir-pagination-controls></dir-pagination-controls>
+</section>
+
+<footer class="row">
+    <div class="text-center col-xs-12 small">
+        foto copyright: costin-milea.ro
+    </div>
+</footer>

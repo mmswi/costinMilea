@@ -1,0 +1,33 @@
+<header class="row project-page-header">
+
+    <div class="logo-container">
+        <a ui-sref="acasa" class="logo-link"><img src="assets/images/logo-small.png" alt="logo image">
+        </a>
+    </div>
+</header>
+
+<!-- main section -->
+<section class="row">
+    <div class="text-center">
+        <span class="date-style">{{project.date}}</span>
+        <h1 class="project-title">{{project.name}}</h1>
+    </div>
+
+    <article class="col-md-10 col-md-offset-1 margin-bottom-20">
+        <div class="image-gallery clearfix">
+            <figure class="gallery-pic" ng-repeat="img in project.images" style="background-image: url('{{img}}');" swipe-box-directive>
+                <a href="{{img}}" class="swipebox"><img ng-src="{{img}}" alt="">
+                </a>
+            </figure>
+        </div>
+    </article>
+
+
+</section>
+<!-- / section -->
+
+<footer class="row">
+    <div class="text-center col-xs-12 small">
+        foto copyright: costin-milea.ro
+    </div>
+</footer>
