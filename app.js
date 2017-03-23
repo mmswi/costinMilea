@@ -14,13 +14,13 @@ angular.module('photoApp', ['ui.router', 'angularUtils.directives.dirPagination'
                 url: "/despre",
                 templateUrl: "app/components/about/despre.html"
             })
-            .state('proiecte', {
-                url: "/proiecte",
-                templateUrl: "app/components/projects/proiecte.html",
-                controller: 'projectsCtrl'
-            })
-            .state('proiect', {
-                url: "/proiect/:id",
+            // .state('proiecte', {
+            //     url: "/proiecte",
+            //     templateUrl: "app/components/projects/proiecte.html",
+            //     controller: 'projectsCtrl'
+            // })
+            .state('portofoliu', {
+                url: "/portofoliu",
                 templateUrl: "app/components/shared/project/pagina-proiect.html",
                 controller: 'projectCtrl'
             })

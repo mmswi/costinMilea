@@ -1,12 +1,12 @@
 angular.module('photoApp')
-    .controller('projectCtrl', ['$scope', 'selectedProjectService', 'projectsFactory', '$stateParams', function ($scope, selPrjServ, prjFactory, $stateParams) {
+    .controller('projectCtrl', ['$scope', 'selectedProjectService', 'projectsFactory', function ($scope, selPrjServ, prjFactory) {
 
 
         if (typeof selPrjServ.selectedProject.id === "undefined") {
             console.log("no data", selPrjServ.selectedProject)
-            console.log("prj id", $stateParams.id)
-            prjFactory.filterData($stateParams.id, function (projectsData) {
-                $scope.project = projectsData;
+            prjFactory.getAllData(function (projectsData) {
+                selPrjServ.selectedProject = projectsData[0];
+                $scope.project = projectsData[0];
                 console.log("data pulled again with filter ", $scope.project);
             })
 
