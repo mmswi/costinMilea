@@ -1,4 +1,4 @@
-angular.module('photoApp', ['ui.router', 'angularUtils.directives.dirPagination'])
+angular.module('photoApp', ['ui.router', 'angularUtils.directives.dirPagination', 'angular-cookie-law'])
     .config(function ($stateProvider, $urlRouterProvider) {
         //
         // For any unmatched url, redirect to /acasa
@@ -27,5 +27,9 @@ angular.module('photoApp', ['ui.router', 'angularUtils.directives.dirPagination'
             .state('contact', {
                 url: "/contact",
                 templateUrl: "app/components/contact/contact.html"
+            })
+            .state('cookiePolicy', {
+                url: "/cookiePolicy",
+                templateUrl: "app/components/cookiePolicy/cookiePolicy.html"
             })
     })
