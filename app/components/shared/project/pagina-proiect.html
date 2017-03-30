@@ -14,8 +14,8 @@
 
     <article class="col-md-10 col-md-offset-1 margin-bottom-20">
         <div class="image-gallery clearfix">
-            <figure class="gallery-pic" ng-repeat="img in project.images" style="background-image: url('{{img}}');" swipe-box-directive>
-                <a href="{{img}}" class="swipebox"><img ng-src="{{img}}" alt="">
+            <figure class="gallery-pic" ng-repeat="img in project.images" swipe-box-directive> <!--style="background-image: url('{{img[0]}}');"-->
+                <a href="{{img[0]}}" class="swipebox"><img ng-src="{{img[0]}}" alt="">
                 </a>
             </figure>
         </div>
